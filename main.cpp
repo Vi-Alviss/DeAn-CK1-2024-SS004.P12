@@ -1,7 +1,7 @@
 #include <iostream>
 #include <conio.h>
 #include <windows.h>    
-
+#include "mylib.h"
 using namespace std;
 
 class Point
