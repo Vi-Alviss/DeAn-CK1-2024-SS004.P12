@@ -1,17 +1,16 @@
 #include <iostream>
 #include <conio.h>
-
 #include <windows.h>
 #include <vector>
+#include "mylib.h"
 
 #define Width 50
 #define Height 25
 
-   
-#include "mylib.h"
-
 using namespace std;
+
 int Dir = 0;
+
 class Point
 {
 public:
@@ -19,13 +18,7 @@ public:
     Point() : x(0), y(0) {}
     Point(int p_x, int p_y) : x(p_x), y(p_y) {}
 };
-void GetXY(int p_X, int p_Y)
-{
-    COORD ToaDo;
-    ToaDo.X = p_X;
-    ToaDo.Y = p_Y;
-    SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), ToaDo);
-}
+
 class Food {
 public:
     COORD Pos_food;
@@ -42,7 +35,7 @@ public:
     }
     // Hien thi thuc an tren man hinh
     void Draw_Food () const{
-        GetXY(Pos_food.X,Pos_food.Y);
+        gotoXY(Pos_food.X,Pos_food.Y);
         cout<<"O";
     }
 
@@ -62,7 +55,7 @@ public:
     {
         for (const auto &pos : object)
         {
-            GetXY(pos.X, pos.Y);
+            gotoXY(pos.X, pos.Y);
             cout << "X";
         }
         // GetXY(object.back().X, object.back().Y);
@@ -73,7 +66,7 @@ public:
         // Xóa toàn bộ con rắn (để vẽ lại sau)
         for (const auto &pos : object)
         {
-            GetXY(pos.X, pos.Y);
+            gotoXY(pos.X, pos.Y);
             cout << " ";
         }
     }
