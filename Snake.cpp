@@ -53,3 +53,13 @@ Snake::Snake() : dx(1), dy(0)
     object.push_back({50 / 2 - 1, 25 / 2});
     object.push_back({50 / 2 - 2, 25 / 2});
 }
+bool Snake:: Eat_food(Food &p_food, int &mark)
+{
+    if (object[0].X == p_food.Pos_food.X && object[0].Y == p_food.Pos_food.Y)
+    {
+        p_food.Respawn_food();
+        mark += p_food.point;
+        return true;
+    }
+    return false;
+}
