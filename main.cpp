@@ -6,6 +6,8 @@
 #include "Food.h"
 #include <fstream>
 #include <string>
+#include "Snake.h"
+
 #define Width 50
 #define Height 25
 
