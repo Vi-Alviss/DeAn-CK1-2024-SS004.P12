@@ -1,5 +1,8 @@
 #include "Food.h"
+<<<<<<< HEAD
 
+=======
+>>>>>>> main
 Food::Food()
 {
     point = 10;
