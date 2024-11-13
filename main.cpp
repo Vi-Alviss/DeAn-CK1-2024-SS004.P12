@@ -13,7 +13,7 @@
 
 using namespace std;
 
-
+int Score = 0;
 
 int main()
 {
