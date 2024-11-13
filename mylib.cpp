@@ -16,12 +16,12 @@ int whereY() // lay toa do y
     return -1;
 }
 
-void gotoXY(int x, int y) // di chuyen con tro den toa do (x,y)
+void GetXY(int p_X, int p_Y)
 {
-    HANDLE hConsoleOutput;
-    COORD Cursor_an_Pos = {x, y};
-    hConsoleOutput = GetStdHandle(STD_OUTPUT_HANDLE);
-    SetConsoleCursorPosition(hConsoleOutput, Cursor_an_Pos);
+    COORD ToaDo;
+    ToaDo.X = p_X;
+    ToaDo.Y = p_Y;
+    SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), ToaDo);
 }
 
 void SetColor(WORD color) // dat mau cho chu

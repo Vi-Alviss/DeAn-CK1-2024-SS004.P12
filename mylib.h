@@ -6,7 +6,7 @@
 
 int whereX();
 int whereY();
-void gotoXY(int x, int y);
+void GetXY(int p_X, int p_Y);
 void SetColor(WORD color);
 void ShowCur(bool CursorVisibility);
 int inputKey();
