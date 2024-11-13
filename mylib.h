@@ -3,6 +3,8 @@
 #include <windows.h>
 #include <conio.h>
 #define KEY_NONE -1
+#define Width 50
+#define Height 25
 
 int whereX();
 int whereY();
