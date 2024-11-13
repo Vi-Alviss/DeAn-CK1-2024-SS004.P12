@@ -10,13 +10,15 @@ Di chuyển và ăn mồi làm cho con rắn của bạn dài ra nhất có th�
 Một trò chơi giải trí giảm stress.
 
 ## Features
+```sh
 Đơn giải chơi.
 Lập kỷ lục đua cùng bạn bè.
-
+```
 ## Installation
 
-1. **Clone the repository**
+1. **Clone our repository**
 
 2. **Set up a virtual environment:**
    ```sh
    C++
+```
