@@ -9,15 +9,7 @@
 
 using namespace std;
 
-int Dir = 0;
 
-class Point
-{
-public:
-    int x, y;
-    Point() : x(0), y(0) {}
-    Point(int p_x, int p_y) : x(p_x), y(p_y) {}
-};
 
 int main()
 {
