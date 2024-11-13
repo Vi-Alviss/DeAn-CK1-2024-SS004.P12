@@ -20,3 +20,7 @@ Lập kỷ lục đua cùng bạn bè.
 2. **Set up a virtual environment:**
    ```sh
    C++
+   ```
+## Class and Funtion
+
+# Class Snake
