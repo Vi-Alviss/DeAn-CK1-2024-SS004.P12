@@ -63,3 +63,11 @@ bool Snake:: Eat_food(Food &p_food, int &mark)
     }
     return false;
 }
+void Snake::Draw()
+{
+    for (const auto &pos : object)
+    {
+        GetXY(pos.X, pos.Y);
+        cout << "X";
+    }
+}
