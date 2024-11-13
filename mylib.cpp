@@ -45,19 +45,3 @@ void ShowCur(bool CursorVisibility) // lam an con tro chuot
     CONSOLE_CURSOR_INFO cursor = {1, CursorVisibility};
     SetConsoleCursorInfo(handle,&cursor);
 }
-
-int inputKey()
-{
-    if (_kbhit())
-    {
-        int key = _getch();
-
-        if (key == 224)
-        {
-            key = _getch();
-            return key + 1000;
-        }
-
-        return key;
-    }
-}
