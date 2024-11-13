@@ -46,19 +46,3 @@ bool Snake::CollisionBody()
     }
     return false;
 }
-
-Snake::Snake() : dx(1), dy(0)
-{
-    object.push_back({50 / 2, 25 / 2});
-    object.push_back({50 / 2 - 1, 25 / 2});
-    object.push_back({50 / 2 - 2, 25 / 2});
-}
-
-void Snake::Draw()
-{
-    for (const auto &pos : object)
-    {
-        GetXY(pos.X, pos.Y);
-        cout << "X";
-    }
-}
