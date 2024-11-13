@@ -3,6 +3,7 @@
 #include <windows.h>
 #include <vector>
 #include "mylib.h"
+#include "Food.h"
 
 #define Width 50
 #define Height 25
