@@ -46,17 +46,16 @@ bool Snake::CollisionBody()
     }
     return false;
 }
-bool Snake:: Eat_food(Food &p_food, int &mark)
+
+
+Snake::Snake() : dx(1), dy(0)
 {
-<<<<<<< Updated upstream
-=======
     object.push_back({50 / 2, 25 / 2});
     object.push_back({50 / 2 - 1, 25 / 2});
     object.push_back({50 / 2 - 2, 25 / 2});
 }
 bool Snake:: Eat_food(Food &p_food, int &mark)
 {
->>>>>>> Stashed changes
     if (object[0].X == p_food.Pos_food.X && object[0].Y == p_food.Pos_food.Y)
     {
         p_food.Respawn_food();
@@ -64,4 +63,13 @@ bool Snake:: Eat_food(Food &p_food, int &mark)
         return true;
     }
     return false;
+}
+void Snake::Draw()
+{
+    for (const auto &pos : object)
+    {
+        GetXY(pos.X, pos.Y);
+        cout << "X";
+    }
+
 }

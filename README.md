@@ -22,3 +22,7 @@ Lập kỷ lục đua cùng bạn bè.
    ```sh
    C++
 ```
+   ```
+## Class and Funtion
+
+# Class Snake
