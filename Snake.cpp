@@ -18,3 +18,11 @@ void Snake::Move_Snake(bool grow = false)
         object.pop_back();
     }
 }
+void Snake::Change_dir(int new_dx, int new_dy)
+{
+    if (new_dx != -dx || new_dy != -dy)
+    {
+        dx = new_dx;
+        dy = new_dy;
+    }
+}
