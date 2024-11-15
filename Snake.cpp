@@ -66,10 +66,15 @@ bool Snake:: Eat_food(Food &p_food, int &mark)
 }
 void Snake::Draw()
 {
+    bool isFirst = true;
     for (const auto &pos : object)
     {
         GetXY(pos.X, pos.Y);
-        cout << "X";
+        if(isFirst){
+            cout << "O";
+            isFirst = false;
+        }
+        else cout<<"o";
     }
 
 }
