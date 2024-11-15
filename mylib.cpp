@@ -45,3 +45,21 @@ void ShowCur(bool CursorVisibility) // lam an con tro chuot
     CONSOLE_CURSOR_INFO cursor = {1, CursorVisibility};
     SetConsoleCursorInfo(handle,&cursor);
 }
+
+void DrawWall()
+{
+    for (int i = 0; i < Width + 2; i++)
+    {
+        GetXY(i, 0);
+        cout << "#";
+        GetXY(i, Height + 1);
+        cout << "#";
+    }
+    for (int i = 0; i < Height + 2; i++)
+    {
+        GetXY(0, i);
+        cout << "#";
+        GetXY(Width + 1, i);
+        cout << "#";
+    }
+}
