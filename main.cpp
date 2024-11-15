@@ -4,7 +4,7 @@
 #include <vector>
 #include <fstream>
 #include <string>
-
+#include <limits>
 #include "Snake.h"
 #include "mylib.h"
 #include "Food.h"
@@ -13,7 +13,7 @@
 #define Height 25
 
 using namespace std;
-bool isPaused = false;
+bool isPaused = false;  
 
 
 bool Get_Key(Snake &p_snake)
