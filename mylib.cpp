@@ -46,18 +46,20 @@ void ShowCur(bool CursorVisibility) // lam an con tro chuot
     SetConsoleCursorInfo(handle,&cursor);
 }
 
-int inputKey()
+void DrawWall()
 {
-    if (_kbhit())
+    for (int i = 0; i < Width + 2; i++)
     {
-        int key = _getch();
-
-        if (key == 224)
-        {
-            key = _getch();
-            return key + 1000;
-        }
-
-        return key;
+        GetXY(i, 0);
+        cout << "#";
+        GetXY(i, Height + 1);
+        cout << "#";
+    }
+    for (int i = 0; i < Height + 2; i++)
+    {
+        GetXY(0, i);
+        cout << "#";
+        GetXY(Width + 1, i);
+        cout << "#";
     }
 }
