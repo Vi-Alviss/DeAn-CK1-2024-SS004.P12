@@ -182,6 +182,18 @@ bool Get_Key(Snake &p_snake)
     return true;
 }
 
+
+void Setup(Snake s, string player_name = "")
+{
+
+    ofstream BXH("BXH.txt");
+    GetXY(50 / 2 - 8, 25 / 2 + 1);
+    SetColor(14);
+    cout << "Enter Player's name: \n";
+    GetXY(50 / 2 - 3, 25 / 2 + 2);
+    SetColor(15);
+    getline(cin, player_name);
+}
 int main()
 {
     return 0;
