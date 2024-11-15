@@ -18,6 +18,8 @@ void Result()
 {
     SetColor(8);
 
+    DisplaySnakeArt()
+
     SetColor(3);
     DrawWall();
     GetXY(50 / 2 - 13, 25 / 2 - 1);
