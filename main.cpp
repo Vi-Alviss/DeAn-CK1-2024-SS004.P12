@@ -190,7 +190,64 @@ bool Get_Key(Snake &p_snake)
     }
     return true;
 }
+void UpdateBXH(const string fileName, int p_score, string p_PlayerName)
+{
+    int high_score = 0;
+    string HighgPlayerName;
+    ifstream infile(fileName);
+    if (infile.is_open())
+    {
+        infile >> high_score;
+        infile >> HighgPlayerName;
+        infile.close();
+    }
 
+    Result();
+    if (p_score > high_score)
+    {
+        HighgPlayerName = p_PlayerName;
+        ofstream outfile(fileName);
+        if (outfile.is_open())
+        {
+            outfile << p_score;
+            outfile << HighgPlayerName;
+            outfile.close();
+            GetXY(50 / 2 - 13, 25 / 2 + 1);
+            SetColor(2);
+            cout << "New Record: ";
+            SetColor(15);
+            cout << p_score;
+            SetColor(10);
+            cout << " $";
+
+            GetXY(50 / 2 - 13, 25 / 2 + 3);
+            SetColor(9);
+            cout << "Congrats Ur Highest Player: ";
+            SetColor(15);
+            cout << HighgPlayerName;
+        }
+        else
+        {
+            cerr << "Can not write in file." << endl;
+        }
+    }
+    else
+    {
+
+        GetXY(50 / 2 - 13, 25 / 2 + 1);
+        SetColor(15);
+        cout << "Highest Record: " << high_score;
+        SetColor(10);
+        cout << " $";
+        SetColor(15);
+        GetXY(50 / 2 - 13, 25 / 2 + 2);
+        cout << "Highest Player name: " << HighgPlayerName;
+        GetXY(50 / 2 - 13, 25 / 2 + 4);
+        cout << "Your total money: " << p_score;
+        SetColor(10);
+        cout << " $";
+    }
+}
 void Choosing_Difficulty()
 {
     int diff;
@@ -240,9 +297,9 @@ void Choosing_Difficulty()
     }
 }
 
-
 void Setup(Snake s, string player_name = "")
 {
+
     ofstream BXH("BXH.txt");
     GetXY(50 / 2 - 8, 25 / 2 + 1);
     SetColor(14);
@@ -250,16 +307,21 @@ void Setup(Snake s, string player_name = "")
     GetXY(50 / 2 - 3, 25 / 2 + 2);
     SetColor(15);
     getline(cin, player_name);
+
     Choosing_Difficulty();
+
     system("cls");
     std::cout << endl;
     bool run = true;
     srand(static_cast<unsigned int>(time(0)));
     Food O_food;
+
     SetColor(3);
     DrawWall();
+
     SetColor(color_Score);
     GetXY(Width + 6, 3);
+
     while (run)
     {
 
@@ -289,9 +351,47 @@ void Setup(Snake s, string player_name = "")
             SetColor(color);
             s.Move_Snake(grew);
         }
-            
-            
-             if (check_play_again)
+
+        if (s.CollisionBody())
+        {
+            system("cls");
+            UpdateBXH("BXH", Score, player_name);
+            // Control after playing
+            while (true)
+            {
+                SetColor(14);
+                GetXY(50 / 2 - 8, 25 / 2 + 6);
+                std::cout << "Press E to EXIT";
+                GetXY(50 / 2 - 8, 25 / 2 + 8);
+                std::cout << "Press A to PLAY AGAIN";
+                Sleep(400);
+                GetXY(50 / 2 - 8, 25 / 2 + 6);
+                std::cout << "               ";
+                GetXY(50 / 2 - 8, 25 / 2 + 8);
+                std::cout << "                     ";
+                Sleep(400);
+
+                if (_kbhit())
+                {
+                    char key = _getch();
+                    if (key == 'e' || key == 'E')
+                    {
+                        GetXY(0, Height + 3);
+                        SetColor(15);
+                        exit(0);
+                        // return;
+                    }
+                    else if (key == 'a' || key == 'A')
+                    {
+                        check_play_again = true;
+                        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                        SetColor(8);
+                        break;
+                    }
+                }
+            }
+            // Control after playing
+            if (check_play_again)
             {
                 system("cls");
                 Title();
@@ -309,6 +409,7 @@ void Setup(Snake s, string player_name = "")
 
         Sleep(speed);
     }
+}
 
 void ShowBlinkingText()
 {
@@ -330,7 +431,6 @@ void ShowBlinkingText()
         }
     }
 }
-
 
 int main()
 {
