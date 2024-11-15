@@ -184,63 +184,24 @@ bool Get_Key(Snake &p_snake)
     return true;
 }
 
-void UpdateBXH(const string fileName, int p_score, string p_PlayerName)
+void Choosing_Difficulty()
 {
-    int high_score = 0;
-    string HighgPlayerName;
-    ifstream infile(fileName);
-    if (infile.is_open())
-    {
-        infile >> high_score;
-        infile >> HighgPlayerName;
-        infile.close();
-    }
-
-    Result(); 
-    if (p_score > high_score)
-    {
-        HighgPlayerName = p_PlayerName;
-        ofstream outfile(fileName);
-        if (outfile.is_open())
-        {
-            outfile << p_score;
-            outfile << HighgPlayerName;
-            outfile.close();
-            GetXY(50 / 2 - 13, 25 / 2 + 1);
-            SetColor(2);
-            cout << "New Record: ";
-            SetColor(15);
-            cout << p_score;
-            SetColor(10);
-            cout << " $";
-
-            GetXY(50 / 2 - 13, 25 / 2 + 3);
-            SetColor(9);
-            cout << "Congrats Ur Highest Player: ";
-            SetColor(15);
-            cout << HighgPlayerName;
-        }
-        else
-        {
-            cerr << "Can not write in file." << endl;
-        }
-    }
-    else
-    {
-
-        GetXY(50 / 2 - 13, 25 / 2 + 1);
-        SetColor(15);
-        cout << "Highest Record: " << high_score;
-        SetColor(10);
-        cout << " $";
-        SetColor(15);
-        GetXY(50 / 2 - 13, 25 / 2 + 2);
-        cout << "Highest Player name: " << HighgPlayerName;
-        GetXY(50 / 2 - 13, 25 / 2 + 4);
-        cout << "Your total money: " << p_score;
-        SetColor(10);
-        cout << " $";
-    }
+    int diff;
+    GetXY(50 / 2 - 9, 25 / 2 + 1);
+    SetColor(14);
+    cout << "*****  Difficulty *****  ";
+    GetXY(50 / 2 - 14, 25 / 2 + 2);
+    SetColor(15);
+    cout << "______________________________";
+    GetXY(50 / 2 - 6, 25 / 2 + 3);
+    SetColor(12);
+    cout << "Hard: 1";
+    GetXY(50 / 2 - 6, 25 / 2 + 4);
+    SetColor(6);
+    cout << "Normal: 2";
+    GetXY(50 / 2 - 6, 25 / 2 + 5);
+    SetColor(2);
+    cout << "Easy: 3";
 }
 
 int main()
