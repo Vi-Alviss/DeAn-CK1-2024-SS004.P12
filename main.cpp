@@ -12,7 +12,7 @@
 #define Width 53
 #define Height 25
 bool isPaused = false;
-
+int color_Score = 15;
 int Score = 0;
 int speed = 0;
 
@@ -181,7 +181,20 @@ bool Get_Key(Snake &p_snake)
     }
     return true;
 }
+void Setup(Snake s, string player_name = "")
+{
+    system("cls");
+    std::cout << endl;
+    bool run = true;
+    srand(static_cast<unsigned int>(time(0)));
+    Food O_food;
 
+    SetColor(3);
+    DrawWall();
+
+    SetColor(color_Score);
+    GetXY(Width + 6, 3);
+}
 int main()
 {
     return 0;
