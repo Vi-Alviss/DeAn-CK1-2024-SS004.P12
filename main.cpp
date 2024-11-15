@@ -14,7 +14,8 @@
 
 using namespace std;
 
-
+int Score = 0;
+int speed = 0;
 
 int main()
 {
