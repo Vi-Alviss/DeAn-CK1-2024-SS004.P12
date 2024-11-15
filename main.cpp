@@ -17,7 +17,6 @@ using namespace std;
 void Result()
 {
     SetColor(8);
-    DisplaySnakeArt();
 
     SetColor(3);
     DrawWall();
