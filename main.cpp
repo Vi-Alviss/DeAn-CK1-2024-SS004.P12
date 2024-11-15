@@ -434,5 +434,12 @@ void ShowBlinkingText()
 
 int main()
 {
+    system("cls");
+
+    Snake s;
+    Title();
+    ShowBlinkingText();
+    SetColor(15);
+    Setup(s);
     return 0;
 }
