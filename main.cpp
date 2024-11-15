@@ -17,10 +17,34 @@ int Score = 0;
 int speed = 0;
 
 using namespace std;
+void DisplaySnakeArt()
+{
+    std::cout << R"(
 
+
+         /^\/^\
+       _|__|  O|
+\/     /~     \_/ \
+ \____|__________/  \
+        \_______      \
+                `\     \                 \
+                  |     |                  \
+                 /      /                    \
+                /     /                       \\ 
+              /      /                         \ \
+             /     /                            \  \
+           /     /             _----_            \   \
+          /     /           _-~      ~-_         |   |
+         (      (        _-~    _--_    ~-_     _/   |
+          \      ~-____-~    _-~    ~-_    ~-_-~    /
+            ~-_           _-~          ~-_       _-~
+               ~--______-~                ~-___-~
+    )" << std::endl;
+}
 void Title()
 {
     SetColor(8);
+    DisplaySnakeArt();
     SetColor(3);
     DrawWall();
     GetXY(50 / 2 - 13, 25 / 2 - 1);
@@ -60,54 +84,7 @@ void Title()
 
     SetColor(14);
 }
-void DisplaySnakeArt()
-{
-    std::cout << R"(
->>>>>>> refs/remotes/origin/main
 
-    SetColor(10);
-    std::cout << " $$";
-
-    SetColor(15);
-    cout << "  GREEDY SNAKE ";
-    SetColor(10);
-    std::cout << "$$ ";
-
-    for (int i = 14; i >= 11; i--)
-    {
-        SetColor(i);
-        if (i == 14)
-        {
-            cout << "O";
-        }
-        else
-        {
-            cout << "o";
-        }
-    }
-
-    SetColor(14);
-}
-
-         /^\/^\
-       _|__|  O|
-\/     /~     \_/ \
- \____|__________/  \
-        \_______      \
-                `\     \                 \
-                  |     |                  \
-                 /      /                    \
-                /     /                       \\ 
-              /      /                         \ \
-             /     /                            \  \
-           /     /             _----_            \   \
-          /     /           _-~      ~-_         |   |
-         (      (        _-~    _--_    ~-_     _/   |
-          \      ~-____-~    _-~    ~-_    ~-_-~    /
-            ~-_           _-~          ~-_       _-~
-               ~--______-~                ~-___-~
-    )" << std::endl;
-}
 
 int main()
 {
