@@ -11,12 +11,19 @@
 
 #define Width 53
 #define Height 25
-bool isPaused = false;
-int color_Score = 15;
-int Score = 0;
-int speed = 0;
 
 using namespace std;
+int Score = 0;
+int color_Score = 15;
+int color_Food = 2;
+int color = 1;
+int speed = 0;
+bool check_play_again = false;
+
+//
+bool isPaused = false;
+//
+
 void DisplaySnakeArt()
 {
     std::cout << R"(
@@ -253,7 +260,56 @@ void Setup(Snake s, string player_name = "")
     DrawWall();
     SetColor(color_Score);
     GetXY(Width + 6, 3);
-}
+    while (run)
+    {
+
+        int mark = 0;
+        run = Get_Key(s);
+
+        if (!isPaused)
+        {
+            s.Erase();
+
+            SetColor(color_Score);
+            GetXY(Width + 5, 3);
+            cout << "Your total money: " << Score;
+            SetColor(10);
+            std::cout << " $";
+
+            bool grew = s.Eat_food(O_food, mark);
+            if (grew == true)
+            {
+                Score = Score + mark;
+                color = (color + 1) % 16;
+                if (color == color_Score)
+                    color = (color + 1) % 16;
+                if (color == 0)
+                    color = color + 1;
+            }
+            SetColor(color);
+            s.Move_Snake(grew);
+        }
+            
+            
+             if (check_play_again)
+            {
+                system("cls");
+                Title();
+                Score = 0;
+                Snake new_s;
+                Setup(new_s, player_name);
+                check_play_again = false;
+            }
+            break;
+        }
+
+        s.Draw();
+        SetColor(color_Food);
+        O_food.Draw_Food();
+
+        Sleep(speed);
+    }
+
 void ShowBlinkingText()
 {
 
