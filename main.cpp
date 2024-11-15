@@ -241,7 +241,7 @@ void UpdateBXH(const string fileName, int p_score, string p_PlayerName)
         cout << " $";
         SetColor(15);
         GetXY(50 / 2 - 13, 25 / 2 + 2);
-        cout << "Highest Player name: " << HighgPlayerName;
+        cout << "Highest Player's name: " << HighgPlayerName;
         GetXY(50 / 2 - 13, 25 / 2 + 4);
         cout << "Your total money: " << p_score;
         SetColor(10);
