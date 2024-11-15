@@ -202,6 +202,35 @@ void Choosing_Difficulty()
     GetXY(50 / 2 - 6, 25 / 2 + 5);
     SetColor(2);
     cout << "Easy: 3";
+
+    GetXY(50 / 2 - 6, 25 / 2 + 7);
+    SetColor(13);
+    cout << "Select difficulty: ";
+    do
+    {
+        SetColor(13);
+
+        cin >> diff;
+        if (diff < 1 || diff > 3)
+        {
+            GetXY(50 / 2 - 10, 25 / 2 + 8);
+            SetColor(4);
+            cout << "Wrong difficulty, select again !";
+            GetXY(50 / 2 + 13, 25 / 2 + 7);
+        }
+    } while (diff < 1 || diff > 3);
+
+    switch (diff)
+    {
+    case 1:
+        speed = 60;
+        break;
+    case 2:
+        speed = 100;
+        break;
+    default:
+        speed = 160;
+    }
 }
 
 int main()
