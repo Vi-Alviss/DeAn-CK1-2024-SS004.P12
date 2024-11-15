@@ -182,6 +182,21 @@ bool Get_Key(Snake &p_snake)
     return true;
 }
 
+void UpdateBXH(const string fileName, int p_score, string p_PlayerName)
+{
+    int high_score = 0;
+    string HighgPlayerName;
+    ifstream infile(fileName);
+    if (infile.is_open())
+    {
+        infile >> high_score;
+        infile >> HighgPlayerName;
+        infile.close();
+    }
+
+    Result();
+}
+
 int main()
 {
     return 0;
