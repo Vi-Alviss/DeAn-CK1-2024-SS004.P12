@@ -15,6 +15,8 @@
 using namespace std;
 bool isPaused = false;  
 
+int Score = 0;
+int speed = 0;
 
 bool Get_Key(Snake &p_snake)
 {
@@ -69,6 +71,31 @@ bool Get_Key(Snake &p_snake)
         }
     }
     return true;
+}
+void DisplaySnakeArt()
+{
+    std::cout << R"(
+
+
+
+         /^\/^\
+       _|__|  O|
+\/     /~     \_/ \
+ \____|__________/  \
+        \_______      \
+                `\     \                 \
+                  |     |                  \
+                 /      /                    \
+                /     /                       \\ 
+              /      /                         \ \
+             /     /                            \  \
+           /     /             _----_            \   \
+          /     /           _-~      ~-_         |   |
+         (      (        _-~    _--_    ~-_     _/   |
+          \      ~-____-~    _-~    ~-_    ~-_-~    /
+            ~-_           _-~          ~-_       _-~
+               ~--______-~                ~-___-~
+    )" << std::endl;
 }
 
 int main()
