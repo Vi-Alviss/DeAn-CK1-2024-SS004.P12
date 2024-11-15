@@ -90,7 +90,7 @@ void Result()
 {
     SetColor(8);
 
-    DisplaySnakeArt()
+    DisplaySnakeArt();
 
     SetColor(3);
     DrawWall();
