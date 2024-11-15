@@ -14,5 +14,5 @@ void Food::Respawn_food()
 void Food::Draw_Food()
 {
     GetXY(Pos_food.X, Pos_food.Y);
-    cout << "O";
+    cout << "$";
 }
