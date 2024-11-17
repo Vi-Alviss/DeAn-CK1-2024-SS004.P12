@@ -3,7 +3,7 @@
 Link git: https://github.com/Vi-Alviss/DeAn-CK1-2024-SS004.P12  
 Link Slack: https://app.slack.com/client/T07L41M7TJ7/C07UD362Q12  
 Link Overleaf báo cáo đồ án cuối kì: https://www.overleaf.com/read/dfmqptqxcxsj#b89294
-Link Overlead slide báo cáo: https://www.overleaf.com/project/6739b4848f15f649c873894e
+Link Overleaf slide báo cáo: https://www.overleaf.com/project/6739b4848f15f649c873894e
 
 # Greedy Snake Game
 
