@@ -16,3 +16,4 @@ void GetXY(int p_X, int p_Y);
 void SetColor(WORD color);
 void ShowCur(bool CursorVisibility);
 void DrawWall();
+void DisplaySnakeArt();
