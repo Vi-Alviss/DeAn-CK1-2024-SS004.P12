@@ -73,8 +73,87 @@ A classic "Greedy Snake" game implemented in C++ with customizable difficulty le
 1. Launch game.
 2. Enter your name to starting tracking your score.
 3. Choose the desired difficulty level:
-* **Hard**: Fast gameplay
-* **Normal**: Moderate speed
-* **Easy**: Slow - paced for beginners
+   - **Hard**: Fast gameplay
+   - **Normal**: Moderate speed
+   - **Easy**: Slow - paced for beginners
+## Game Controls
 
+| Key   | Action                   |
+|-------|--------------------------|
+| `↑`   | Move Up                  |
+| `↓`   | Move Down                |
+| `←`   | Move Left                |
+| `→`   | Move Right               |
+| `P`   | Pause/Resume the Game    |
+| `S`   | Start the Game           |
+| `E`   | Exit the Game            |
+| `A`   | Play Again               |
 
+## Code Structure
+
+### `main.cpp`
+**Entry point of the game.**
+
+- **Purpose**: Manages the main game loop, user inputs, and game states.
+- **Key Responsibilities**:
+  - Initializes the game environment, including setting up the title, player name input, and difficulty selection.
+  - Handles the main game loop where the snake moves, checks for collisions, and updates the game state.
+  - Processes user inputs for controlling the snake, pausing/resuming the game, and starting a new game after a game over.
+  - Displays results such as the player’s score, high score, and offers options to restart or exit the game.
+
+---
+
+### `Snake.h` and `Snake.cpp`
+**Defines the Snake class.**
+
+- **Purpose**: Handles snake drawing, movement, growth, and collision detection.
+- **Key Functions**:
+  - `Draw()`: Draws the snake on the screen.
+  - `Erase()`: Erases the snake from the screen.
+  - `Move_Snake()`: Moves the snake, with an option to grow the snake when eating food.
+  - `Change_dir()`: Changes the snake’s direction based on user input.
+  - `CollisionBody()`: Detects if the snake collides with its own body.
+  - `Eat_food()`: Checks if the snake eats food and updates the score.
+
+---
+
+### `Food.h` and `Food.cpp`
+**Defines the Food class.**
+
+- **Purpose**: Manages food spawning and rendering.
+- **Key Functions**:
+  - `Respawn_food()`: Spawns food at a random position on the game screen.
+  - `Draw_Food()`: Draws the food on the screen.
+  - **Attributes**:
+    - `Pos_food`: The position of the food on the screen.
+    - `point`: The point value for the food item.
+
+---
+
+### `mylib.h` and `mylib.cpp`
+**Utility functions for console operations.**
+
+- **Purpose**: Provides utility functions for setting colors, positioning text, and drawing walls.
+- **Key Functions**:
+  - `SetColor()`: Sets the console text color.
+  - `GetXY()`: Sets the position of the cursor on the console screen.
+  - `DrawWall()`: Draws the game wall around the playing area.
+  - Other helper functions for console-based input/output handling.
+
+### Acknowledgments
+ **Snake ASCII art used in the start and result screens.**
+ **Implementation inspired by the classic snake game logic**
+
+### Contributos
+1. Lê Quốc Huy
+**Role: Developer**
+**Contributions:**
+2. Lê Nhật Quang
+**Role: Developer**
+**Contributions:**
+3. Nguyễn Anh Tuấn
+**Role: Developer**
+**Contributions:**
+4. Ngô Thái Vinh
+**Role: Leader**
+**Contributions:** 
