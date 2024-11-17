@@ -17,3 +17,4 @@ void SetColor(WORD color);
 void ShowCur(bool CursorVisibility);
 void DrawWall();
 void DisplaySnakeArt();
+void Title();
