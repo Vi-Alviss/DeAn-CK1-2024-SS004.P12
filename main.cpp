@@ -313,6 +313,7 @@ void Setup(Snake s, string player_name = "")
     GetXY(50 / 2 - 8, 25 / 2 + 1);
     SetColor(14);
     cout << "Enter Player's name: \n";
+    ShowCur(true);
     GetXY(50 / 2 - 3, 25 / 2 + 2);
     SetColor(15);
     getline(cin, player_name);
@@ -320,6 +321,7 @@ void Setup(Snake s, string player_name = "")
     Choosing_Difficulty();
 
     system("cls");
+    ShowCur(false);
     std::cout << endl;
     bool run = true;
     srand(static_cast<unsigned int>(time(0)));
@@ -444,11 +446,14 @@ void ShowBlinkingText()
 int main()
 {
     system("cls");
-
+    ShowCur(false);
     Snake s;
     Title();
     ShowBlinkingText();
     SetColor(15);
     Setup(s);
+
+    ShowCur(true);
+
     return 0;
 }
