@@ -140,11 +140,11 @@ A classic "Greedy Snake" game implemented in C++ with customizable difficulty le
   - `DrawWall()`: Draws the game wall around the playing area.
   - Other helper functions for console-based input/output handling.
 
-### Acknowledgments
+### Acknowledgements
  **Snake ASCII art used in the start and result screens.**
  **Implementation inspired by the classic snake game logic**
 
-### Contributos
+### Contributors
 1. Lê Quốc Huy
 - **Role: Developer**
 - **Contributions: Move Snake, Draw Display, Update size of Snake, Title**
