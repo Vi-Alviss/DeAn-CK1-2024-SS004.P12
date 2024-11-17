@@ -178,3 +178,24 @@ void Result()
         }
     }
 }
+
+void ShowBlinkingText()
+{
+
+    while (true)
+    {
+        GetXY(50 / 2 - 8, 25 / 2 + 1);
+        cout << "Press 'S' to START";
+        Sleep(400);
+        GetXY(50 / 2 - 8, 25 / 2 + 1);
+        cout << "                  ";
+        Sleep(400);
+
+        if (_kbhit())
+        {
+            char key = _getch();
+            if (key == 's' || key == 'S')
+                return;
+        }
+    }
+}

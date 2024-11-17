@@ -19,3 +19,4 @@ void DrawWall();
 void DisplaySnakeArt();
 void Title();
 void Result();
+void ShowBlinkingText();
