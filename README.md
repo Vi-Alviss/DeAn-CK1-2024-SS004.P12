@@ -64,9 +64,9 @@ A classic "Greedy Snake" game implemented in C++ with customizable difficulty le
 3. Compile Program
    ```bash
    g++ -o SnakeGame main.cpp Snake.cpp Food.cpp mylib.cpp -std=c++11
-4. Add file
+4. Open file.exe
    ```bash
-   /SnakeGame
+   ./main.exe
 
 
 ## How to play
@@ -124,7 +124,7 @@ A classic "Greedy Snake" game implemented in C++ with customizable difficulty le
 - **Key Functions**:
   - `Respawn_food()`: Spawns food at a random position on the game screen.
   - `Draw_Food()`: Draws the food on the screen.
-  - **Attributes**:
+- **Attributes**:
     - `Pos_food`: The position of the food on the screen.
     - `point`: The point value for the food item.
 
@@ -144,16 +144,16 @@ A classic "Greedy Snake" game implemented in C++ with customizable difficulty le
  **Snake ASCII art used in the start and result screens.**
  **Implementation inspired by the classic snake game logic**
 
-### Contributos
+### Contributors:
 1. Lê Quốc Huy
 **Role: Developer**
-**Contributions:**
+**Contributions: Move Snake, Drwaw Display, update size of Snake, title**
 2. Lê Nhật Quang
 **Role: Developer**
-**Contributions:**
+**Contributions: Create Wall, Create Snake, Setup Game, Pause Game**
 3. Nguyễn Anh Tuấn
 **Role: Developer**
-**Contributions:**
+**Contributions: Create Food, Make Respawr food, Create LeaderBoards, SetupGane**
 4. Ngô Thái Vinh
 **Role: Leader**
-**Contributions:** 
+**Contributions: Maneage project, Update Result, Create level game mode, make logic Collision** 
