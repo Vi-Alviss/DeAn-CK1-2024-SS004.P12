@@ -146,14 +146,15 @@ A classic "Greedy Snake" game implemented in C++ with customizable difficulty le
 
 ### Contributos
 1. Lê Quốc Huy
-**Role: Developer**
-**Contributions:**
+- **Role: Developer**
+- **Contributions: Move Snake, Draw Display, Update size of Snake, Title**
+
 2. Lê Nhật Quang
-**Role: Developer**
-**Contributions:**
+- **Role: Developer**
+- **Contributions: Create wall; Create snake; Setup game; Pause game**
 3. Nguyễn Anh Tuấn
-**Role: Developer**
-**Contributions:**
+- **Role: Developer**
+- **Contributions: Create food; Create respawn food; Create leaderboard; Setup game**
 4. Ngô Thái Vinh
-**Role: Leader**
-**Contributions:** 
+- **Role: Leader**
+- **Contributions: Manage project; Update result; Create level; Sovle collision** 
