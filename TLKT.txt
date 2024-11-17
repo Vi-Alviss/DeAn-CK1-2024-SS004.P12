@@ -1,0 +1,47 @@
+III. Tài liệu kĩ thuật
+chức năng chính:
+
+khỏi tạo môi trường
++ Giao Diện
++ bắt đầu chơi game (press S to start)
++ Nhập tên người chươi
++ chọn độ khó
++ bản đồ game + rắn
++ Di chuyển bẳng mũi tên hoặc là các phím: 'a', 's', 'd', 'f'
++ random position of food
++ Hiển thị điểm số
++ tạm dừng game
++ Hành vi của rắn
+- Nhận ký tự từ bàn phím để di chuyể	n
+- khi ăn thức ăn cập nhật độ dài mới, điểm tăng
+- khi chạm tường
+- khi tự cắn
++ Bản kết quả
+- người chơi điểm cao nhất
+- điểm của bạn
++ Lựa chọn tiếp tục chơi hay thoát
+
+
+
+1. Thư viện cần thiết
+
+* Thư viện có sẵn
+- iostream
+- conio.h
+- windows.h
+- vector
+- fstream
+- string
+- limits
+
+* Thư viện của tôi
+
+- mylib.h
+- Snake.h
+- Food.h
+
+1. mylib.h
++
+
+
+
