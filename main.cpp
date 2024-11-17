@@ -8,6 +8,7 @@
 #include "Snake.h"
 #include "mylib.h"
 #include "Food.h"
+#include <ctime>
 
 #define Width 53
 #define Height 25

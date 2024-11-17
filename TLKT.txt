@@ -1,27 +1,21 @@
 III. Tài liệu kĩ thuật
-chức năng chính:
 
-khỏi tạo môi trường
-+ Giao Diện
-+ bắt đầu chơi game (press S to start)
-+ Nhập tên người chươi
-+ chọn độ khó
-+ bản đồ game + rắn
-+ Di chuyển bẳng mũi tên hoặc là các phím: 'a', 's', 'd', 'f'
-+ random position of food
-+ Hiển thị điểm số
-+ tạm dừng game
-+ Hành vi của rắn
-- Nhận ký tự từ bàn phím để di chuyể	n
-- khi ăn thức ăn cập nhật độ dài mới, điểm tăng
-- khi chạm tường
-- khi tự cắn
-+ Bản kết quả
-- người chơi điểm cao nhất
-- điểm của bạn
-+ Lựa chọn tiếp tục chơi hay thoát
+Mô tả chức năng:
+
+Khi chạy chương trình, tạo lập khu vực giới hạn di chuyển, hình con rắn được vẽ từ bảng mã ASCII, tên game và nhấn phím 's' để bắt đầu chơi
+Nhập tên của người chơi, Chọn độ khó (dễ: nhập 1, vừa: nhập 2, khó: nhập 3)
+Trò chơi bắt đầu, màn hình xuất hiện con rắn và thức ăn sẽ được xuất hiện ngẫu nhiên trong khu vực giới hạn, điểm số sẽ được tính bên phải khu
+ vực giới hạn, mỗi thức ăn rắn ăn được sẽ được tính là 10 điểm
+Di chuyển con rắn bằng các phím mũi tên hoặc các phím 'a', 's', 'd', 'w' để dẫn rắn đến chỗ thức ăn
+Nếu rắn ăn được thì tăng độ dài rắn thêm 1 và tạo thức ăn ở một địa điểm mới, đồng thời cập nhật điểm
+Nếu nhấn phím 'p' trò chơi sẽ dừng lại tạm thời, con rắn sẽ đứng yên tại chỗ dù người chơi có nhấn phím di chuyển, để chơi tiếp thì nhấn 'p' một
+ lần nữa
+Nếu như rắn di chuyển đến rìa khu vực thì con rắn sẽ xuất hiện ở phần rìa đối diện đấy
+Trò chơi sẽ kết thúc khi đầu rắn chạm vào phần thân, màn hình sẽ in ra điểm số cao nhất trong các lần chơi và tên của người chơi đó, nếu muốn chơi
+ lại thì nhấn phím 'r', còn thoát khỏi trò chơi thì nhấn phím 'e'
 
 
+cấu trúc chính của chương trình
 
 1. Thư viện cần thiết
 
