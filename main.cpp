@@ -144,22 +144,31 @@ bool Get_Key(Snake &p_snake)
 
         switch (key)
         {
+        
+        case 'w':
+        case 'W':
         case 72: // Arrow Up
             if (!isPaused)
                 p_snake.Change_dir(0, -1);
             break;
+        case 's':
+        case 'S':
         case 80: // Arrow Down
             if (!isPaused)
                 p_snake.Change_dir(0, 1);
             break;
+        case 'a':
+        case 'A':
         case 75: // Arrow Left
             if (!isPaused)
                 p_snake.Change_dir(-1, 0);
             break;
+        case 'd':
+        case 'D':
         case 77: // Arrow Right
             if (!isPaused)
                 p_snake.Change_dir(1, 0);
-            break;
+            break;    
         case 'p':                 // Toggle pause
             isPaused = !isPaused; // Toggle the pause state
             if (isPaused)
@@ -361,12 +370,12 @@ void Setup(Snake s, string player_name = "")
             {
                 SetColor(14);
                 GetXY(50 / 2 - 8, 25 / 2 + 6);
-                std::cout << "Press E to EXIT";
+                std::cout << "Press 'E' to EXIT";
                 GetXY(50 / 2 - 8, 25 / 2 + 8);
-                std::cout << "Press A to PLAY AGAIN";
+                std::cout << "Press 'R' to RESTART";
                 Sleep(400);
                 GetXY(50 / 2 - 8, 25 / 2 + 6);
-                std::cout << "               ";
+                std::cout << "                 ";
                 GetXY(50 / 2 - 8, 25 / 2 + 8);
                 std::cout << "                     ";
                 Sleep(400);
@@ -381,7 +390,7 @@ void Setup(Snake s, string player_name = "")
                         exit(0);
                         // return;
                     }
-                    else if (key == 'a' || key == 'A')
+                    else if (key == 'r' || key == 'R')
                     {
                         check_play_again = true;
                         cin.ignore(numeric_limits<streamsize>::max(), '\n');
