@@ -158,3 +158,12 @@ A classic "Greedy Snake" game implemented in C++ with customizable difficulty le
 4. Ngô Thái Vinh
 - **Role: Leader**
 - **Contributions: Manage project; Update result; Create level; Sovle collision** 
+
+# Thành viên:
+* Nhóm trưởng: **Ngô Thái Vinh** - MSSV: **23521791** - Github: https://github.com/Vi-Alviss
+
+* Thành viên 2: **Lê Nhật Quang** - MSSV: **23521283** - Github: https://github.com/ln05q 
+
+* Thành viên 3: **Nguyễn Anh Tuấn** - MSSV: **23521717** - Github: https://github.com/blastvious
+
+* Thành viên 4: **Lê Quốc Huy** - MSSV: **23520615** - Github: https://github.com/LQHtmt
