@@ -18,3 +18,4 @@ void ShowCur(bool CursorVisibility);
 void DrawWall();
 void DisplaySnakeArt();
 void Title();
+void Result();
