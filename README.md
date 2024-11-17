@@ -80,10 +80,10 @@ A classic "Greedy Snake" game implemented in C++ with customizable difficulty le
 
 | Key   | Action                   |
 |-------|--------------------------|
-| `↑`   | Move Up                  |
-| `↓`   | Move Down                |
-| `←`   | Move Left                |
-| `→`   | Move Right               |
+| `↑/w`   | Move Up                  |
+| `↓/s`   | Move Down                |
+| `←/a`   | Move Left                |
+| `→/d`   | Move Right               |
 | `P`   | Pause/Resume the Game    |
 | `S`   | Start the Game           |
 | `E`   | Exit the Game            |
