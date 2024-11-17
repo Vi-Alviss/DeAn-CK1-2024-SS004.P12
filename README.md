@@ -58,9 +58,15 @@ A classic "Greedy Snake" game implemented in C++ with customizable difficulty le
 1. Clone the repository:
    ```bash
    git clone https://github.com/your-repository/snake-game.git
-2. cd snake-game
-3. g++ -o SnakeGame main.cpp Snake.cpp Food.cpp mylib.cpp -std=c++11
-4. /SnakeGame
+2. Move to file contain program
+   ```bash
+   cd snake-game
+3. Compile Program
+   ```bash
+   g++ -o SnakeGame main.cpp Snake.cpp Food.cpp mylib.cpp -std=c++11
+4. Add file
+   ```bash
+   /SnakeGame
 
 
 ## How to play
