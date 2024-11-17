@@ -57,7 +57,7 @@ A classic "Greedy Snake" game implemented in C++ with customizable difficulty le
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-repository/snake-game.git
+   git clone https://github.com/Vi-Alviss/DeAn-CK1-2024-SS004.P12/tree/main
 2. Move to file contain program
    ```bash
    cd snake-game
